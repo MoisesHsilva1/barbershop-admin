@@ -1,0 +1,29 @@
+# Performance Context
+
+React Compiler is enabled.
+
+Rules:
+
+- Trust React Compiler
+- Avoid unnecessary useMemo
+- Avoid unnecessary useCallback
+- Avoid premature memoization
+- Memoize only after profiling
+
+Prefer:
+
+- Suspense
+- lazy()
+- code splitting
+- virtualization
+
+Avoid:
+
+```tsx
+const value=useMemo(
+ ()=>calculate(),
+[]
+)
+```
+
+unless profiling proves necessity

@@ -1,0 +1,37 @@
+# Testing Context
+
+Tools:
+
+- Vitest
+- React Testing Library
+- Playwright
+
+Priority:
+
+1. Business rules
+2. User flows
+3. Integration
+4. Components
+
+Rules:
+
+- Test behavior
+- Avoid implementation testing
+- Mock external dependencies only
+- Use factories
+- Critical paths require 100% coverage
+- should create tests in folder tests with group tests
+
+Avoid:
+
+Bad:
+
+expect(state.value).toBe("abc")
+
+Good:
+
+expect(
+ screen.getByText(
+   "Login successful"
+ )
+)

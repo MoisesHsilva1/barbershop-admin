@@ -1,0 +1,16 @@
+# Security Context
+
+Always:
+
+- Validate external data using Zod
+- Sanitize user input
+- Use environment variables
+- Validate uploads
+- Use HTTPS
+- save tokens in cookies
+
+Never:
+
+- Expose secrets
+- Trust frontend validation
+- Store sensitive information in localStorage

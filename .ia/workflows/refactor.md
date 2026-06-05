@@ -1,0 +1,19 @@
+# Refactor
+
+Goal:
+
+Improve code without changing behavior.
+
+Checklist:
+
+- remove duplication
+- improve readability
+- simplify logic
+- improve naming
+- improve architecture
+
+Rules:
+
+- preserve behavior
+- preserve types
+- preserve tests

@@ -1,0 +1,34 @@
+
+# Architecture Context
+
+Atomic Design for UI.
+
+Rules:
+
+Atoms:
+
+- Small reusable UI
+
+Molecules:
+
+- Combine atoms
+
+Organisms:
+
+- Complex sections
+
+Templates:
+
+- Layout structure
+
+Pages:
+
+- Final composition
+
+Business rules:
+
+- Never inside components
+- Services contain external communication
+- Hooks contain behavior
+- UI only renders data
+- Avoid circular dependencies
