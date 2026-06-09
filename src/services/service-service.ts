@@ -3,14 +3,14 @@ import type { ApiListResponse, ApiResponse } from '@/types/interfaces/api-respon
 import type { Service, ServiceRequest } from '@/types/interfaces/service';
 
 export async function fetchServices(): Promise<Service[]> {
-  const response = await api.get<ApiListResponse<Service>>('/services');
+  const response = await api.get<ApiListResponse<Service>>('/products');
 
   return response.data.rows;
 }
 
 export async function createService(payload: ServiceRequest): Promise<Service> {
   const response = await api.post<Service>(
-    '/services',
+    '/products',
     payload,
   );
 
@@ -22,7 +22,7 @@ export async function updateService(
   payload: ServiceRequest,
 ): Promise<Service> {
   const response = await api.put<ApiResponse<Service>>(
-    `/services/${id}`,
+    `/products/${id}`,
     payload,
   );
 
@@ -30,5 +30,5 @@ export async function updateService(
 }
 
 export async function deleteService(id: string): Promise<void> {
-  return await api.delete(`/services/${id}`);
+  return await api.delete(`/products/${id}`);
 }
